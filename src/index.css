@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Core Colors - Vibrant & Premium */
+  --kp-orange: #ff5a00;
+  --kp-orange-bright: #ff7a33;
+  --kp-orange-soft: #ff9f7a;
+  --kp-white: #ffffff;
+  --kp-white-soft: #fffaf5;
+  --kp-charcoal: #121214;
+  --kp-navy: #1a1a1e;
+  --kp-subtle: #6a6b71;
+  --kp-line: rgba(255, 90, 0, 0.12);
+  --kp-card-bg: #ffffff;
+  
+  /* Shadows & Effects */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 24px rgba(255, 90, 0, 0.08);
+  --shadow-lg: 0 16px 48px rgba(255, 90, 0, 0.12);
+  --glass: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Outfit', sans-serif;
+  background: #fbf9f7;
+  color: var(--kp-charcoal);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography Scale */
+h1, h2, h3, h4 {
+  margin: 0;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--kp-charcoal);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  line-height: 0.95;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+  color: var(--kp-subtle);
+  font-size: 1.05rem;
+}
+
+/* Utility Classes */
+.container {
+  width: min(1200px, 100% - 40px);
+  margin-inline: auto;
+}
+
+.glass-morphism {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.section-padding {
+  padding: clamp(60px, 10vw, 120px) 0;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--kp-orange), #ff2a00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--kp-orange);
+  color: white;
+  box-shadow: 0 10px 20px -10px var(--kp-orange);
+}
+
+.btn-primary:hover {
+  background: var(--kp-orange-bright);
+  box-shadow: 0 15px 25px -10px var(--kp-orange);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--kp-charcoal);
+  border: 1px solid var(--kp-line);
+}
+
+.btn-secondary:hover {
+  background: var(--kp-white-soft);
+  border-color: var(--kp-orange-soft);
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes driftGlow {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -20px); }
+}
+
+@keyframes liveDotPulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 42, 42, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 42, 42, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 42, 42, 0); }
+}
+
+@keyframes phoneShadowPulse {
+  0%, 100% { filter: drop-shadow(0 20px 30px rgba(0,0,0,0.2)); }
+  50% { filter: drop-shadow(0 30px 50px rgba(0,0,0,0.3)); }
+}
