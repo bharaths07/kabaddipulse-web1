@@ -13,8 +13,12 @@ function SiteLayout({ children }) {
     <div className="page">
       <header className="site-header">
         <NavLink className="brand-block" to="/" aria-label="KabaddiPulse home">
-          <span className="brand-name">KabaddiPulse</span>
-          <span className="brand-tagline">The Heart of Kabaddi</span>
+          <img 
+            src="/logo.png" 
+            alt="KabaddiPulse Logo" 
+            height="52"
+            style={{ objectFit: 'contain', flexShrink: 0 }}
+          />
         </NavLink>
 
         <nav className="main-nav" aria-label="Main navigation">
@@ -59,7 +63,7 @@ function SiteLayout({ children }) {
             marginBottom: '40px'
           }}>
             <div className="footer-brand-side">
-              <span className="brand-name">KabaddiPulse</span>
+              <img src="/logo.png" alt="KabaddiPulse Logo" height="48" style={{ objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
               <p style={{ marginTop: '12px', color: 'rgba(255,255,255,0.6)' }}>
                 Building India&apos;s digital infrastructure for grassroots Kabaddi.
               </p>
