@@ -39,7 +39,6 @@ function SiteLayout({ children }) {
             target="_blank" 
             rel="noreferrer"
             className="btn btn-secondary nav-cta"
-            style={{ marginRight: '12px' }}
           >
             Live Demo
           </a>
@@ -55,13 +54,7 @@ function SiteLayout({ children }) {
 
       <footer className="footer">
         <div className="container">
-          <div className="footer-grid" style={{ 
-            display: 'grid', 
-            gridTemplateColumns: '1fr 1fr 1fr', 
-            gap: '40px',
-            textAlign: 'left',
-            marginBottom: '40px'
-          }}>
+          <div className="footer-grid">
             <div className="footer-brand-side">
               <img src="/logo.png" alt="KabaddiPulse Logo" height="48" style={{ objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
               <p style={{ marginTop: '12px', color: 'rgba(255,255,255,0.6)' }}>

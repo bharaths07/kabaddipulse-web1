@@ -585,6 +585,12 @@
   box-shadow: 0 0 0 4px rgba(255, 90, 0, 0.1);
 }
 
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
 .success-msg {
   background: #ecfdf5;
   color: #065f46;
@@ -605,6 +611,20 @@
 
 .footer p { color: rgba(255, 255, 255, 0.6); margin-bottom: 16px; font-size: 0.9rem; }
 .footer a { color: #fff; font-weight: 700; text-decoration: none; }
+
+.footer-grid {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 40px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
 /* Mobile Responsive */
 @media (max-width: 1000px) {
@@ -642,4 +662,65 @@
   .site-header { padding: 12px 20px; }
   
   .phone-mockup { width: 240px; height: 500px; }
+
+  .header-actions { gap: 8px; }
+  .header-actions .btn { padding: 8px 16px; font-size: 0.85rem; }
+}
+
+@media (max-width: 600px) {
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .footer-brand-side, 
+  .footer-nav-side, 
+  .footer-social-side {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-brand-side p {
+    text-align: center;
+  }
+
+  .header-actions .btn-secondary {
+    display: none;
+  }
+
+  .brand-name {
+    font-size: 1.5rem;
+  }
+
+  .site-header img[alt="KabaddiPulse Logo"] {
+    height: 40px !important;
+  }
+
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  
+  .section { padding: 40px 0; }
+  
+  .contact-form { padding: 24px; }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
+  }
 }

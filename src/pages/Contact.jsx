@@ -133,7 +133,7 @@ function Contact() {
                         <input required type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="+91 00000 00000" />
                       </label>
                       
-                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                      <div className="contact-form-row">
                         <label>
                           Role
                           <select name="role" value={formData.role} onChange={handleChange}>
